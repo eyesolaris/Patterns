@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FactoryMethod", "FactoryMet
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Command", "Command\Command.vcxproj", "{DE15F368-8B7B-4675-AF20-5D8DA409A5CD}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Spectator", "Spectator\Spectator.pyproj", "{B07AA3B4-02AF-4ABE-ACAF-0443F490C7B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,12 @@ Global
 		{DE15F368-8B7B-4675-AF20-5D8DA409A5CD}.Release|x64.Build.0 = Release|x64
 		{DE15F368-8B7B-4675-AF20-5D8DA409A5CD}.Release|x86.ActiveCfg = Release|Win32
 		{DE15F368-8B7B-4675-AF20-5D8DA409A5CD}.Release|x86.Build.0 = Release|Win32
+		{B07AA3B4-02AF-4ABE-ACAF-0443F490C7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07AA3B4-02AF-4ABE-ACAF-0443F490C7B3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B07AA3B4-02AF-4ABE-ACAF-0443F490C7B3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B07AA3B4-02AF-4ABE-ACAF-0443F490C7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07AA3B4-02AF-4ABE-ACAF-0443F490C7B3}.Release|x64.ActiveCfg = Release|Any CPU
+		{B07AA3B4-02AF-4ABE-ACAF-0443F490C7B3}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
