@@ -1,0 +1,12 @@
+{
+  "name": "command",
+  "private": true,
+  "version": "0.1.0",
+  "description": "pattern command",
+  "scripts": {
+    "test": "tsc --target ES6 command.ts & node command.js"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
