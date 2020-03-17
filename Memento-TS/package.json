@@ -1,0 +1,12 @@
+{
+  "name": "memento",
+  "private": true,
+  "version": "0.1.0",
+  "description": "pattern memento",
+  "scripts": {
+    "test": "tsc index.ts & node index.js"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
