@@ -1,10 +1,6 @@
 #include <iostream>
 #include <locale>
-#include <map>
-#include <memory>
 #include <string>
-#include <utility>
-#include <stdexcept>
 #include <thread>
 #include <chrono>
 
@@ -71,10 +67,10 @@ public:
 	}
 };
 
-class SoftwareDevelopmentMediator : public Mediator
+class SoftwareDevelopmentManager : public Mediator
 {
 public:
-	SoftwareDevelopmentMediator()
+	SoftwareDevelopmentManager()
 		: architect{ this },
 		dev{ this },
 		tester{ this }
@@ -116,7 +112,7 @@ private:
 int main()
 {
 	std::locale::global(std::locale(""));
-	SoftwareDevelopmentMediator mediator;
+	SoftwareDevelopmentManager mediator;
 	mediator.startDevelopment();
 	std::system("pause");
 }
