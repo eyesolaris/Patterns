@@ -5,8 +5,123 @@
 #include <string>
 #include <utility>
 #include <stdexcept>
+#include <thread>
+#include <chrono>
 
-class AddressAndName
+using namespace std::chrono_literals;
+
+class Colleague;
+
+class Mediator
+{
+public:
+	virtual ~Mediator() = 0;
+	virtual void finishedWork(Colleague* colleague) = 0;
+};
+
+class Colleague
+{
+public:
+	Colleague(Mediator* mediator)
+		: mediator{ mediator }
+	{
+	}
+
+	void finishedWork()
+	{
+		mediator->finishedWork(this);
+	}
+
+private:
+	Mediator* mediator;
+};
+
+Mediator::~Mediator() { }
+
+class Architect : public Colleague
+{
+public:
+	void architect()
+	{
+		std::this_thread::sleep_for(1s);
+		std::cout << "Проектировщик создал архитектуру. Пора писать код!\n";
+		finishedWork();
+	}
+};
+
+class Developer : public Colleague
+{
+public:
+	void develop()
+	{
+		std::this_thread::sleep_for(1s);
+		std::cout << "Разработчик написал код. Пора отправлять на тестирование\n";
+		finishedWork();
+	}
+};
+
+class Tester : public Colleague
+{
+public:
+	void test()
+	{
+		std::this_thread::sleep_for(1s);
+		std::cout << "Тестировщик закончил тестирование.\n";
+		finishedWork();
+	}
+};
+
+class SoftwareDevelopmentMediator : public Mediator
+{
+public:
+	SoftwareDevelopmentMediator()
+		: architect{ this },
+		dev{ this },
+		tester{ this }
+	{
+	}
+
+	virtual void finishedWork(Colleague* colleague) override
+	{
+		if (colleague == &architect)
+		{
+			dev.develop();
+		}
+		else if (colleague == &dev)
+		{
+			tester.test();
+		}
+		else if (colleague == &tester)
+		{
+			std::this_thread::sleep_for(1s);
+			std::cout << "Разработка ПО завершена. Получите отличный продукт!\n";
+		}
+		else
+		{
+			std::cout << "Данный работник не участвует в разработке ПО\n";
+		}
+	}
+
+	void startDevelopment()
+	{
+		architect.architect();
+	}
+
+private:
+	Architect architect;
+	Developer dev;
+	Tester tester;
+};
+
+int main()
+{
+	std::locale::global(std::locale(""));
+	SoftwareDevelopmentMediator mediator;
+	mediator.startDevelopment();
+	std::system("pause");
+}
+
+/*class AddressAndName
 {
 public:
 	AddressAndName(const std::string& name, const std::string& address)
@@ -147,6 +262,8 @@ public:
 };
 
 class Subscriber;
+
+// Почтовая служба
 class MailService
 {
 public:
@@ -163,10 +280,10 @@ public:
 
 private:
 	// Возможно проживание нескольких человек по одному адресу
-	std::multimap<std::string /*address*/, std::shared_ptr<Subscriber>> subscribers;
+	std::multimap<std::string /*address*//*, std::shared_ptr<Subscriber>> subscribers;
 };
 
-/*abstract*/ class Subscriber
+/*abstract*//* class Subscriber
 {
 public:
 	virtual ~Subscriber() = 0;
@@ -231,6 +348,7 @@ void MailService::sendLetter(Letter letter)
 	throw AddresseeNotFound(std::move(letter));
 }
 
+// Подписчики с облачным хранилищем. Сохраняют свои письма в облаке
 class SubscriberWithCloudStorage : public Subscriber
 {
 public:
@@ -245,7 +363,7 @@ public:
 	}
 };
 
-// Скрытный подписчик
+// Консервативные подписчики, не пользующиеся облаком
 class ConservativeSubscriber : public Subscriber
 {
 public:
@@ -260,6 +378,7 @@ public:
 	}
 };
 
+// Подписчики, которые не хотят получать письма, а только отправлять
 class RejectSubscriber : public Subscriber
 {
 public:
@@ -331,5 +450,5 @@ int main()
 	/*std::vector<std::shared_ptr<Subscriber>> subscribers;
 	subscribers.push_back(peter);
 	subscribers.push_back(ivan);
-	subscribers.push_back(sidr);*/
-}
+	subscribers.push_back(sidr);*//*
+}*/
