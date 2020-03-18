@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Handler", "Handler\Handler.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mediator-C++", "Mediator-C++\Mediator-C++.vcxproj", "{6CEA990E-BCB1-430A-9D49-FC1557E632CF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{699D7BAC-64A7-4742-AE0B-7493EEE09E25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,18 @@ Global
 		{6CEA990E-BCB1-430A-9D49-FC1557E632CF}.Release|x64.Build.0 = Release|x64
 		{6CEA990E-BCB1-430A-9D49-FC1557E632CF}.Release|x86.ActiveCfg = Release|Win32
 		{6CEA990E-BCB1-430A-9D49-FC1557E632CF}.Release|x86.Build.0 = Release|Win32
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Debug|x64.Build.0 = Debug|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Debug|x86.Build.0 = Debug|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Release|x64.ActiveCfg = Release|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Release|x64.Build.0 = Release|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Release|x86.ActiveCfg = Release|Any CPU
+		{699D7BAC-64A7-4742-AE0B-7493EEE09E25}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
