@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LightWeight", "LightWeight\LightWeight.csproj", "{50359A52-06B2-4686-8C5E-A048B8E339E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethod-CS", "TemplateMethod-CS\TemplateMethod-CS.csproj", "{165C27B4-8201-457B-A487-E6AF3680DA0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,6 +179,18 @@ Global
 		{50359A52-06B2-4686-8C5E-A048B8E339E5}.Release|x64.Build.0 = Release|Any CPU
 		{50359A52-06B2-4686-8C5E-A048B8E339E5}.Release|x86.ActiveCfg = Release|Any CPU
 		{50359A52-06B2-4686-8C5E-A048B8E339E5}.Release|x86.Build.0 = Release|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Debug|x64.Build.0 = Debug|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Debug|x86.Build.0 = Debug|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Release|x64.ActiveCfg = Release|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Release|x64.Build.0 = Release|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Release|x86.ActiveCfg = Release|Any CPU
+		{165C27B4-8201-457B-A487-E6AF3680DA0F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
